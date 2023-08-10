@@ -1,0 +1,47 @@
+{
+  "name": "webapp",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "18.9.0"
+  },
+  "scripts": {
+    "start": "set NODE_ENV=production && node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "client": "cd client && npm start",
+    "dev": "npm run devstart & npm run client"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.25.2",
+    "cookie-parser": "^1.4.5",
+    "crypto-js": "^4.0.0",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "express-form-data": "^2.0.17",
+    "express-session": "1.15.6",
+    "express-sslify": "^1.2.0",
+    "http-errors": "~1.6.2",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "libpq": "^1.8.9",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.2",
+    "peer": "^0.6.1",
+    "pg": "^8.6.0",
+    "pg-native": "^3.0.0",
+    "pg-sync": "^0.2.0",
+    "rotating-file-stream": "^3.0.3",
+    "socket.io": "^4.5.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "description": "[![License: MIT](https://img.shields.io/github/license/mathewjoseph31/schools?style=plastic)](https://opensource.org/licenses/MIT)",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
+}

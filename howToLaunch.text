@@ -1,0 +1,16 @@
+--install pm2
+pm2 start "npm run start" --name ischools-server
+
+--generate openssl certificates for https
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+
+
+--obsolete
+--to set a identifier for log
+
+SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
+
+
+
+
+
